@@ -21,10 +21,12 @@ body {
 }
 
 #category a.active {
-    color: rgb(117, 189, 3);
+    color: #403F3F;
+    font-weight: 600;
+    font-size: 20px;
     background-color: rgb(228, 227, 227);
-    padding: 8px 12px;
-    text-align: center;
+    padding: 8px 0px;
     border-radius: 4px;
+    line-height: 30px;
 }
 

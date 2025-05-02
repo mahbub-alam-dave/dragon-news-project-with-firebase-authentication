@@ -30,13 +30,15 @@ const CategoryPages = () => {
 
     console.log(categoryNews)
     return (
-        <div>
-            category page {categoryId}
+        <div className='flex flex-col gap-4 md:gap-6'>
+            <span className='text-[color:var(--color-primary)] text-lg md:text-xl font-semibold leading-[30px]'>Dragon News Home</span>
+            <div className='flex flex-col gap-4 md:gap-6'>
             {
-                categoryNews.map(news => <News 
+            categoryNews.map(news => <News 
                         key={news.id} 
                         news={news}/>)
             }
+            </div>
         </div>
     );
 };

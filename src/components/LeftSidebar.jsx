@@ -8,17 +8,17 @@ const LeftSidebar = () => {
 
 
     return (
-        <div>
+        <div className=''>
                 <Suspense categories={categories} fallback={ <h2>Loading</h2>}>
-                <div className='flex flex-col gap-4 items-center'>
-                <h2>All Categories {categories.length}</h2>
-                <div id='category' className='flex flex-col  gap-3'>
+                <div className='flex flex-col gap-4 w-full'>
+                <h2 className='text-[color:var(--color-primary)] text-lg md:text-xl font-semibold leading-[30px]'>All Categories</h2>
+                <div id='category' className='flex flex-col w-full  gap-3'>
                     {
                         categories.map(category => 
-                            <NavLink to={`/category/${category.id}`} key={category.id}><span 
+                            <NavLink to={`/category/${category.id}`} key={category.id} className={'hover:bg-gray-100 hover:py-2 w-full text-[color:var(--color-accent-two)] text-lg md:text-xl font-medium leading-[30px]'}><span 
                             id={`categoryBtn${category.id}`}
                             category={category}
-                            className='hover:btn'
+                            className='pl-12'
                            >{category.name}</span></NavLink>
                         )
                     }
