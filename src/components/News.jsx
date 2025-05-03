@@ -1,8 +1,11 @@
 import React from 'react';
 import { FaEye } from 'react-icons/fa';
 import { AiFillStar } from 'react-icons/ai';
+import { Link, useLocation } from 'react-router';
 
 const News = ({ news }) => {
+
+  const location = useLocation()
   const {
     title,
     rating,
@@ -46,10 +49,10 @@ const News = ({ news }) => {
       />
 
       {/* Details (first 100 chars) */}
-      <p className="text-sm text-gray-700">
+      <Link to={`/${title.toLowerCase().split(" ").join("-")}`} state={{from: location.pathname}}><p  className="text-sm text-gray-700">
         {details.slice(0, 100)}...
         <span className="text-orange-600 font-semibold cursor-pointer ml-1">Read More</span>
-      </p>
+      </p></Link>
 
       {/* Footer */}
       <div className="flex items-center justify-between text-sm text-gray-600">

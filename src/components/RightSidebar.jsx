@@ -10,8 +10,8 @@ const RightSidebar = () => {
                 <h2 className='text-[color:var(--color-primary)] text-lg md:text-xl font-semibold leading-[30px]'>Login With</h2>
                 <div className='flex flex-col gap-2'>
                 
-                <button className='btn btn-outline bg-transparent text-base text-[color:var(color-primary)] hover:text-blue-400 hover:bg-gray-100 flex gap-4 items-center'><FaGoogle size={20}/> Login with Google</button>
-                <button className='btn btn-outline bg-transparent text-base text-[color:var(color-primary)] hover:text-blue-400 hover:bg-gray-100 flex gap-4 items-center'><FaGithub size={20}/> Login with Github</button>
+                <button className='btn btn-outline bg-transparent text-sm text-[color:var(color-primary)] hover:text-blue-400 hover:bg-gray-100 flex lg:gap-4 items-center'><FaGoogle size={20}/><span className='text-start'>Login with Google</span></button>
+                <button className='btn btn-outline bg-transparent text-sm text-[color:var(color-primary)] hover:text-blue-400 hover:bg-gray-100 flex lg:gap-4 items-center'><FaGithub size={20}/><span className='text-start'>Login with Github</span></button>
                 </div>
             </div>
 

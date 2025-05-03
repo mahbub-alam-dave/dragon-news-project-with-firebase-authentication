@@ -26,11 +26,16 @@ const CategoryPages = () => {
             const filteredNews = allNews.filter(news => news.category_id == categoryId);
             setCategoryNews(filteredNews)
         }
-    },[allNews, categoryId])
+    },[allNews, categoryId]);
 
-    console.log(categoryNews)
+    if(categoryNews.length === 0) {
+        return <div className='flex justify-center items-center py-16'>
+            <h2 className='text-xl md:text-2xl font-bold'>No news at this category</h2>
+            </div>
+    }
+
     return (
-        <div className='flex flex-col gap-4 md:gap-6'>
+        <div className='flex flex-col gap-4 md:gap-6 '>
             <span className='text-[color:var(--color-primary)] text-lg md:text-xl font-semibold leading-[30px]'>Dragon News Home</span>
             <div className='flex flex-col gap-4 md:gap-6'>
             {

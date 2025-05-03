@@ -23,10 +23,22 @@ body {
 #category a.active {
     color: #403F3F;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     background-color: rgb(228, 227, 227);
-    padding: 8px 0px;
+    padding: 8px 8px;
     border-radius: 4px;
     line-height: 30px;
+}
+
+@media screen and (min-width: 769px) {
+    #category a.active {
+        padding: 8px 0px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #category a.active {
+        font-size: 20px;
+    }
 }
 

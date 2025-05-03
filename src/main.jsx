@@ -9,6 +9,10 @@ import About from './pages/About.jsx'
 import ContextProvider from './context/ContextProvider.jsx'
 import Career from './pages/Career.jsx'
 import CategoryPages from './pages/CategoryPages.jsx'
+import Login from './pages/Login.jsx'
+import Register from './pages/Register.jsx'
+import PostDetails from './pages/PostDetails.jsx'
+import PrivateRoute from './components/PrivateRoute.jsx'
 
 
 const router = createBrowserRouter([
@@ -29,8 +33,20 @@ const router = createBrowserRouter([
         Component: About
       },
       {
+        path: "login",
+        Component: Login
+      },
+      {
+        path: "register",
+        Component: Register
+      },
+      {
         path: "career",
         Component: Career
+      },
+      {
+        path: ":title",
+        element: <PrivateRoute><PostDetails /></PrivateRoute>
       }
     ]
   }
